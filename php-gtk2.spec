@@ -47,7 +47,7 @@ przeznaczone do tworzenia samodzielnych aplikacji GUI.
 
 %build
 phpize
-aclocal
+%{__aclocal}
 %configure
 
 %{__make}
