@@ -16,8 +16,6 @@ BuildRequires:	php-pcre
 BuildRequires:	libglade-devel
 BuildRequires:	gtk+-devel
 Requires:	php-cgi
-Provides:	pear(gdk)
-Provides:	pear(GtkWindow)
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_sysconfdir	/etc/php
