@@ -5,7 +5,7 @@ Version:	0.5.2
 Release:	1
 License:	GPL
 Group:		Libraries
-Source0:	%{name}-%{version}.tar.gz
+Source0:	http://gtk.php.net/distributions/%{name}-%{version}.tar.gz
 #Source0:	http://gtk.php.net/do_download.php?download_file=%{name}-%{version}
 URL:		http://gtk.php.net/
 BuildRequires:	autoconf
