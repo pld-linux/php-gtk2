@@ -6,14 +6,18 @@ Release:	1
 License:	GPL
 Group:		Libraries
 Group(de):	Libraries
+Group(es):	Bibliotecas
 Group(fr):	Librairies
 Group(pl):	Biblioteki
+Group(pt_BR):	Bibliotecas
+Group(ru):	âÉÂÌÉÏÔÅËÉ
+Group(uk):	â¦ÂÌ¦ÏÔÅËÉ
 Source0:	%{name}-%{version}.tar.gz
 URL:		http://gtk.php.net/
-BuildRequires:	automake
 BuildRequires:	autoconf
-BuildRequires:	php-devel
+BuildRequires:	automake
 BuildRequires:	php-cgi
+BuildRequires:	php-devel
 BuildRequires:	php-pcre
 BuildRequires:	libglade-devel
 BuildRequires:	gtk+-devel
@@ -23,24 +27,25 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_sysconfdir	/etc/php
 
 %description
-PHP-GTK is a PHP extension that enables you to write client-side cross-platform
-GUI applications. This is the first such extension of this kind and one of the
-goals behind it was to prove that PHP is a capable general-purpose scripting
-language that is suited for more than just Web applications.
+PHP-GTK is a PHP extension that enables you to write client-side
+cross-platform GUI applications. This is the first such extension of
+this kind and one of the goals behind it was to prove that PHP is a
+capable general-purpose scripting language that is suited for more
+than just Web applications.
 
-This extension will _not_ allow you to display GTK+ programs in a Web browser,
-and cannot be used in the Web environment. It is intended for creating
-standalone GUI applications.
+This extension will _not_ allow you to display GTK+ programs in a Web
+browser, and cannot be used in the Web environment. It is intended for
+creating standalone GUI applications.
 
 %description -l pl
 PHP-GTK jest rozszerzeniem PHP które pozwala pisaæ klienckie przeno¶ne
 aplikacje typu GUI. To jest pierwsze roszerzenie tego typu i jednym z
-celów które przy¶wieca³y jego autorom by³o pokazanie ¿e PHP jest jêzykiem
-skryptowym ogólnego zastosowania, który pasuje do czego¶ wiêcej ni¿ tylko
-aplikacje webowe.
+celów które przy¶wieca³y jego autorom by³o pokazanie ¿e PHP jest
+jêzykiem skryptowym ogólnego zastosowania, który pasuje do czego¶
+wiêcej ni¿ tylko aplikacje webowe.
 
-To roszerzenie _nie_pozwoli_ Ci u¿ywaæ programów korzystaj±cych GTK+ przez
-przegl±darkê i nie mo¿e byæ u¿ywane w ¶rodowisku webowym. Jest
+To roszerzenie _nie_pozwoli_ Ci u¿ywaæ programów korzystaj±cych GTK+
+przez przegl±darkê i nie mo¿e byæ u¿ywane w ¶rodowisku webowym. Jest
 przeznaczone do tworzenia samodzielnych aplikacji GUI.
 
 %prep
