@@ -35,12 +35,12 @@ creating standalone GUI applications.
 
 %description -l pl
 PHP-GTK jest rozszerzeniem PHP które pozwala pisaæ klienckie przeno¶ne
-aplikacje typu GUI. To jest pierwsze roszerzenie tego typu i jednym z
+aplikacje typu GUI. To jest pierwsze rozszerzenie tego typu i jednym z
 celów które przy¶wieca³y jego autorom by³o pokazanie ¿e PHP jest
 jêzykiem skryptowym ogólnego zastosowania, który pasuje do czego¶
 wiêcej ni¿ tylko aplikacje webowe.
 
-To roszerzenie _nie_pozwoli_ Ci u¿ywaæ programów korzystaj±cych GTK+
+To rozszerzenie _nie_pozwoli_ Ci u¿ywaæ programów korzystaj±cych GTK+
 przez przegl±darkê i nie mo¿e byæ u¿ywane w ¶rodowisku webowym. Jest
 przeznaczone do tworzenia samodzielnych aplikacji GUI.
 
