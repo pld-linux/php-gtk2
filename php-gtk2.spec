@@ -40,8 +40,8 @@ celów które przy¶wieca³y jego autorom by³o pokazanie ¿e PHP jest
 jêzykiem skryptowym ogólnego zastosowania, który pasuje do czego¶
 wiêcej ni¿ tylko aplikacje webowe.
 
-To rozszerzenie _nie_pozwoli_ Ci u¿ywaæ programów korzystaj±cych GTK+
-przez przegl±darkê i nie mo¿e byæ u¿ywane w ¶rodowisku webowym. Jest
+To rozszerzenie _nie_pozwala_ na u¿ywanie programów korzystaj±cych z
+GTK+ przez przegl±darkê i nie mo¿e byæ u¿ywane w ¶rodowisku WWW. Jest
 przeznaczone do tworzenia samodzielnych aplikacji GUI.
 
 %prep
