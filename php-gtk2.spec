@@ -13,6 +13,7 @@ URL:		http://gtk.php.net/
 BuildRequires:	automake
 BuildRequires:	autoconf
 BuildRequires:	php-devel
+BuildRequires:	php-cgi
 BuildRequires:	libglade-devel
 BuildRequires:	gtk+-devel
 Requires:	php-cgi
