@@ -2,7 +2,7 @@ Summary:	PHP language bindings for GTK+ toolkit
 Summary(pl):	Modu³ PHP z wi±zaniami do GTK+
 Name:		php-gtk
 Version:	0.5.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		Libraries
 Source0:	%{name}-%{version}.tar.gz
@@ -16,6 +16,8 @@ BuildRequires:	php-pcre
 BuildRequires:	libglade-devel
 BuildRequires:	gtk+-devel
 Requires:	php-cgi
+Provides:	pear(gdk)
+Provides:	pear(GtkWindow)
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_sysconfdir	/etc/php
@@ -58,8 +60,6 @@ install -d $RPM_BUILD_ROOT%{_libdir}/php
 
 install modules/php_gtk.so $RPM_BUILD_ROOT%{_libdir}/php/gtk.so
 
-gzip -9nf ChangeLog AUTHORS TODO NEWS
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -73,5 +73,5 @@ fi
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc ChangeLog AUTHORS TODO NEWS
 %attr(755,root,root) %{_libdir}/php/*.so
