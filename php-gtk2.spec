@@ -38,7 +38,7 @@ PHP-GTK jest rozszerzeniem PHP które pozwala pisaæ klienckie przeno¶ne
 aplikacje typu GUI. To jest pierwsze rozszerzenie tego typu i jednym z
 celów które przy¶wieca³y jego autorom by³o pokazanie ¿e PHP jest
 jêzykiem skryptowym ogólnego zastosowania, który pasuje do czego¶
-wiêcej ni¿ tylko aplikacje webowe.
+wiêcej ni¿ tylko aplikacje WWW.
 
 To rozszerzenie _nie_pozwala_ na u¿ywanie programów korzystaj±cych z
 GTK+ przez przegl±darkê i nie mo¿e byæ u¿ywane w ¶rodowisku WWW. Jest
