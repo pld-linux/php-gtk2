@@ -1,0 +1,29 @@
+diff -uNr php-gtk-0.5.2/main/php_gtk_object.c php-gtk-0.5.2.good/main/php_gtk_object.c
+--- php-gtk-0.5.2/main/php_gtk_object.c	Thu Oct 17 22:41:19 2002
++++ php-gtk-0.5.2.good/main/php_gtk_object.c	Thu Jul  3 11:29:42 2003
+@@ -609,9 +609,9 @@
+ 			break;
+ 
+ 		case GTK_TYPE_OBJECT:
+-			if (Z_TYPE_P(value) == IS_OBJECT && php_gtk_check_class(value, gtk_object_ce))
+-				GTK_VALUE_OBJECT(*arg) = PHP_GTK_GET(value);
+-			else
++//			if (Z_TYPE_P(value) == IS_OBJECT && php_gtk_check_class(value, gtk_object_ce))
++//				GTK_VALUE_OBJECT(*arg) = PHP_GTK_GET(value);
++//			else
+ 				return 0;
+ 			break;
+ 
+@@ -886,9 +886,9 @@
+ 			break;
+ 
+ 		case GTK_TYPE_OBJECT:
+-			if (Z_TYPE_P(value) == IS_OBJECT && php_gtk_check_class(value, gtk_object_ce))
+-				*GTK_RETLOC_OBJECT(*ret) = PHP_GTK_GET(value);
+-			else
++//			if (Z_TYPE_P(value) == IS_OBJECT && php_gtk_check_class(value, gtk_object_ce))
++//				*GTK_RETLOC_OBJECT(*ret) = PHP_GTK_GET(value);
++//			else
+ 				*GTK_RETLOC_OBJECT(*ret) = NULL;
+ 			break;
+ 

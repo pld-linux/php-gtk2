@@ -2,12 +2,14 @@ Summary:	PHP language bindings for GTK+ toolkit
 Summary(pl):	Modu³ PHP z wi±zaniami do GTK+
 Name:		php-gtk
 Version:	0.5.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		Libraries
 Source0:	http://gtk.php.net/distributions/%{name}-%{version}.tar.gz
 # Source0-md5:	91e18da45272b5b084e90201f95dfefa
 #Source0:	http://gtk.php.net/do_download.php?download_file=%{name}-%{version}
+Patch0:		%{name}-object.patch
+Patch1:		%{name}-generator.patch
 URL:		http://gtk.php.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -15,7 +17,7 @@ BuildRequires:	php-cgi
 BuildRequires:	php-devel
 BuildRequires:	php-pcre
 BuildRequires:	libglade-devel
-BuildRequires:	gtk+-devel
+BuildRequires:	gtk+2-devel >= 2.1.0
 Requires:	php-cgi
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -45,6 +47,8 @@ przeznaczone do tworzenia samodzielnych aplikacji GUI.
 
 %prep
 %setup -q
+%patch0 -p1
+%patch1 -p1
 mv php_gtk_new.m4 php_gtk.m4
 
 %build
