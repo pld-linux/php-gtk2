@@ -16,7 +16,7 @@ BuildRequires:	php-cgi
 BuildRequires:	php-devel >= 3:4.3.0
 BuildRequires:	php-devel < 3:4.4
 BuildRequires:	libglade-devel
-BuildRequires:	gtk+2-devel >= 2.1.0
+BuildRequires:	gtk+2-devel >= 1:2.1.0
 Requires:	php-cgi
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
