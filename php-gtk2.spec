@@ -14,6 +14,7 @@ BuildRequires:	automake
 BuildRequires:	autoconf
 BuildRequires:	php-devel
 BuildRequires:	php-cgi
+BuildRequires:	php-pcre
 BuildRequires:	libglade-devel
 BuildRequires:	gtk+-devel
 Requires:	php-cgi
