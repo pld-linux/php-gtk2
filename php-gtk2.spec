@@ -13,6 +13,7 @@ Group(pt_BR):	Bibliotecas
 Group(ru):	Библиотеки
 Group(uk):	Б╕бл╕отеки
 Source0:	%{name}-%{version}.tar.gz
+#Source0:	http://gtk.php.net/do_download.php?download_file=%{name}-%{version}
 URL:		http://gtk.php.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -66,6 +67,9 @@ install modules/php_gtk.so $RPM_BUILD_ROOT%{_libdir}/php/gtk.so
 
 gzip -9nf ChangeLog AUTHORS TODO NEWS
 
+%clean
+rm -rf $RPM_BUILD_ROOT
+
 %post
 %{_sbindir}/php-module-install install gtk %{_sysconfdir}/php.ini
 
@@ -73,9 +77,6 @@ gzip -9nf ChangeLog AUTHORS TODO NEWS
 if [ "$1" = "0" ]; then
         %{_sbindir}/php-module-install remove gtk %{_sysconfdir}/php.ini
 fi
-
-%clean
-rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
