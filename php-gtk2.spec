@@ -68,14 +68,6 @@ install modules/php_gtk.so $RPM_BUILD_ROOT%{_libdir}/php/gtk.so
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post
-#%{_sbindir}/php-module-install install gtk %{_sysconfdir}/php.ini
-
-%preun
-#if [ "$1" = "0" ]; then
-#        %{_sbindir}/php-module-install remove gtk %{_sysconfdir}/php.ini
-#fi
-
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog AUTHORS TODO NEWS
