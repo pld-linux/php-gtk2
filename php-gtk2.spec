@@ -1,12 +1,12 @@
 Summary:	PHP language bindings for GTK+ toolkit
 Summary(pl):	Modu³ PHP z wi±zaniami do GTK+
 Name:		php-gtk
-Version:	0.5.2
-Release:	2
+Version:	1.0.0
+Release:	0.1
 License:	GPL
 Group:		Libraries
 Source0:	http://gtk.php.net/distributions/%{name}-%{version}.tar.gz
-# Source0-md5:	91e18da45272b5b084e90201f95dfefa
+# Source0-md5:	38d9d124f0478e2bf4fd059ea58df0f3
 #Source0:	http://gtk.php.net/do_download.php?download_file=%{name}-%{version}
 Patch0:		%{name}-object.patch
 Patch1:		%{name}-generator.patch
