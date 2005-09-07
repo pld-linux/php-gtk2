@@ -10,8 +10,6 @@ Source0:	http://gtk.php.net/distributions/%{name}-%{version}.tar.gz
 Patch0:		%{name}-object.patch
 Patch1:		%{name}-generator.patch
 URL:		http://gtk.php.net/
-BuildRequires:	autoconf
-BuildRequires:	automake
 BuildRequires:	php-cgi
 BuildRequires:	php-devel >= 3:4.3.0
 BuildRequires:	php-devel < 3:4.4
