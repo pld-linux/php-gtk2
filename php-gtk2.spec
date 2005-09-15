@@ -4,18 +4,21 @@
 Summary:	PHP language bindings for GTK+ toolkit
 Summary(pl):	Modu³ PHP z wi±zaniami do GTK+
 Name:		php-gtk
-Version:	1.0.2
-Release:	0.1
+Version:	0.0.cvs
+%define	_snap 20050915
+Release:	0.%{_snap}.1
 License:	GPL
 Group:		Libraries
-Source0:	http://gtk.php.net/distributions/%{name}-%{version}.tar.gz
-# Source0-md5:	b11859c0778e40e53a14919a589db464
+#Source0:	http://gtk.php.net/distributions/%{name}-%{version}.tar.gz
+Source0:	http://glen.alkohol.ee/pld/%{name}-%{_snap}.tar.bz2
+# Source0-md5:	54ef24428317438ae24489f74193ec7f
 Patch0:		%{name}-object.patch
 Patch1:		%{name}-generator.patch
 URL:		http://gtk.php.net/
-BuildRequires:	libglade-devel
-BuildRequires:	php-cli >= 3:5.0.0
-BuildRequires:	php-devel >= 3:5.0.0
+#BuildRequires:	libglade-devel
+BuildRequires:	gtk+2-devel
+BuildRequires:	php-devel >= 4:5.1.0
+BuildRequires:	php-pcre >= 4:5.1.0
 BuildRequires:	rpmbuild(macros) >= 1.238
 %{?requires_php_extension}
 Requires:	php-cli
@@ -44,12 +47,12 @@ GTK+ przez przegl±darkê i nie mo¿e byæ u¿ywane w ¶rodowisku WWW. Jest
 przeznaczone do tworzenia samodzielnych aplikacji GUI.
 
 %prep
-%setup -q -n php_gtk-%{version}
+%setup -q -n php-gtk
 %patch0 -p1
-%patch1 -p1
+#%patch1 -p1
 
 %build
-phpize
+./buildconf
 %configure \
 	--with-php-config=%{_bindir}/php-config
 %{__make}
