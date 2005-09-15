@@ -1,24 +1,26 @@
+%define		_modname	gtk
+%define		_sysconfdir	/etc/php
+%define		extensionsdir	%(php-config --extension-dir 2>/dev/null)
 Summary:	PHP language bindings for GTK+ toolkit
 Summary(pl):	Modu³ PHP z wi±zaniami do GTK+
 Name:		php-gtk
-Version:	1.0.1
+Version:	1.0.2
 Release:	0.1
 License:	GPL
 Group:		Libraries
 Source0:	http://gtk.php.net/distributions/%{name}-%{version}.tar.gz
-# Source0-md5:	f6a884cc740086e246c2c0b0e6752214
+# Source0-md5:	b11859c0778e40e53a14919a589db464
 Patch0:		%{name}-object.patch
 Patch1:		%{name}-generator.patch
 URL:		http://gtk.php.net/
-BuildRequires:	php-cgi
-BuildRequires:	php-devel >= 3:4.3.0
-BuildRequires:	php-devel < 3:4.4
-BuildRequires:	libglade-devel
 BuildRequires:	gtk+2-devel >= 1:2.1.0
-Requires:	php-cgi
+BuildRequires:	libglade-devel
+BuildRequires:	php-cli >= 3:5.0.0
+BuildRequires:	php-devel >= 3:5.0.0
+BuildRequires:	rpmbuild(macros) >= 1.238
+%{?requires_php_extension}
+Requires:	php-cli
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define		_sysconfdir	/etc/php
 
 %description
 PHP-GTK is a PHP extension that enables you to write client-side
@@ -43,21 +45,20 @@ GTK+ przez przegl±darkê i nie mo¿e byæ u¿ywane w ¶rodowisku WWW. Jest
 przeznaczone do tworzenia samodzielnych aplikacji GUI.
 
 %prep
-%setup -q
+%setup -q -n php_gtk-%{version}
 %patch0 -p1
 %patch1 -p1
 
 %build
 phpize
-%configure
-
+%configure \
+	--with-php-config=%{_bindir}/php-config
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_libdir}/php
-
-install modules/php_gtk.so $RPM_BUILD_ROOT%{_libdir}/php/gtk.so
+install -d $RPM_BUILD_ROOT%{extensionsdir}
+install modules/php_gtk.so $RPM_BUILD_ROOT%{extensionsdir}/%{_modname}.so
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -65,4 +66,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog AUTHORS TODO NEWS
-%attr(755,root,root) %{_libdir}/php/*.so
+%attr(755,root,root) %{extensionsdir}/%{_modname}.so
