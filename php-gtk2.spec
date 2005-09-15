@@ -13,7 +13,6 @@ Source0:	http://gtk.php.net/distributions/%{name}-%{version}.tar.gz
 Patch0:		%{name}-object.patch
 Patch1:		%{name}-generator.patch
 URL:		http://gtk.php.net/
-BuildRequires:	gtk+2-devel >= 1:2.1.0
 BuildRequires:	libglade-devel
 BuildRequires:	php-cli >= 3:5.0.0
 BuildRequires:	php-devel >= 3:5.0.0
