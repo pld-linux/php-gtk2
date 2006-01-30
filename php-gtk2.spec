@@ -38,8 +38,8 @@ This extension will _not_ allow you to display GTK+ programs in a Web
 browser, and cannot be used in the Web environment. It is intended for
 creating standalone GUI applications.
 
-This version (php-gtk2) was rewriten almost from scratch,
-and is based on PHP 5.1 and GTK+ 2.6
+This version (php-gtk2) was rewriten almost from scratch and is based
+on PHP 5.1 and GTK+ 2.6.
 
 %description -l pl
 PHP-GTK jest rozszerzeniem PHP które pozwala pisaæ klienckie przeno¶ne
@@ -52,8 +52,8 @@ To rozszerzenie _nie_pozwala_ na u¿ywanie programów korzystaj±cych z
 GTK+ przez przegl±darkê i nie mo¿e byæ u¿ywane w ¶rodowisku WWW. Jest
 przeznaczone do tworzenia samodzielnych aplikacji GUI.
 
-Ta wersja (php-gtk2) zostala przepisana, obecnie bazuje na PHP 5.1
-i GTK+ 2.6.
+Ta wersja (php-gtk2) zosta³a przepisana prawie od zera, obecnie jest
+oparta na PHP 5.1 i GTK+ 2.6.
 
 %prep
 %setup -q -n php-gtk
