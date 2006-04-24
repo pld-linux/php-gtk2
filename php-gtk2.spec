@@ -4,21 +4,20 @@
 %define		_modname	gtk2
 %define		_sysconfdir	/etc/php
 %define		extensionsdir	%(php-config --extension-dir 2>/dev/null)
+
 Summary:	PHP language bindings for GTK+ toolkit
 Summary(pl):	Modu³ PHP z wi±zaniami do GTK+
 Name:		php-gtk
 Version:	0.0.cvs
-%define	_snap 20060131
+%define	_snap 20060424
 Release:	0.%{_snap}.1
 License:	GPL
 Group:		Libraries
 #Source0:	http://gtk.php.net/distributions/%{name}-%{version}.tar.gz
-Source0:	ftp://ftp.tii.pl/PLD/%{name}-%{_snap}.tar.gz
-# Source0-md5:	dfe110e073a63bdce3cee032ad643e06
+Source0:	%{name}-%{_snap}.tar.gz
+# Source0-md5:	834c476bac3a402c03a4be4c0510b343
 Patch0:		%{name}-object.patch
-Patch1:		%{name}-generator.patch
 URL:		http://gtk.php.net/
-#BuildRequires:	libglade-devel
 BuildRequires:	gtk+2-devel
 BuildRequires:	php-devel >= 4:5.1.0
 BuildRequires:	php-pcre >= 4:5.1.0
@@ -58,7 +57,6 @@ oparta na PHP 5.1 i GTK+ 2.6.
 %prep
 %setup -q -n php-gtk
 %patch0 -p1
-#%patch1 -p1
 
 %build
 ./buildconf \
