@@ -1,13 +1,10 @@
-# TODO:
-#  - rename php-gtk -> php-gtk2
-#
 %define		_modname	gtk2
 %define		_sysconfdir	/etc/php
 %define		extensionsdir	%(php-config --extension-dir 2>/dev/null)
 
 Summary:	PHP language bindings for GTK+ toolkit
 Summary(pl):	Modu³ PHP z wi±zaniami do GTK+
-Name:		php-gtk
+Name:		php-gtk2
 Version:	0.0.cvs
 %define	_snap 20060424
 Release:	0.%{_snap}.1
