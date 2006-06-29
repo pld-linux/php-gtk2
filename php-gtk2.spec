@@ -2,17 +2,17 @@
 %define		_sysconfdir	/etc/php
 %define		extensionsdir	%(php-config --extension-dir 2>/dev/null)
 
+%define		_snap		20060629
 Summary:	PHP language bindings for GTK+ toolkit
 Summary(pl):	Modu³ PHP z wi±zaniami do GTK+
 Name:		php-gtk2
 Version:	0.0.cvs
-%define	_snap 20060424
 Release:	0.%{_snap}.1
 License:	GPL
 Group:		Libraries
 #Source0:	http://gtk.php.net/distributions/%{name}-%{version}.tar.gz
-Source0:	%{name}-%{_snap}.tar.gz
-# Source0-md5:	834c476bac3a402c03a4be4c0510b343
+Source0:	%{name}-%{_snap}.tar.bz2
+# Source0-md5:	a966d259c99723c3f542b0549c52f013
 Patch0:		%{name}-object.patch
 URL:		http://gtk.php.net/
 BuildRequires:	gtk+2-devel
