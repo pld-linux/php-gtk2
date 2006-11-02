@@ -18,7 +18,7 @@ URL:		http://gtk.php.net/
 BuildRequires:	gtk+2-devel
 BuildRequires:	php-devel >= 4:5.1.0
 BuildRequires:	php-pcre >= 4:5.1.0
-BuildRequires:	rpmbuild(macros) >= 1.238
+BuildRequires:	rpmbuild(macros) >= 1.322
 %{?requires_php_extension}
 Requires:	php-cli
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
