@@ -8,3 +8,16 @@
    PHP_SUBST(PHP)
  
    BSD_MAKEFILE=no
+--- php-gtk/generator/generator.php~	2006-06-29 12:44:32.000000000 +0300
++++ php-gtk/generator/generator.php	2006-11-26 23:27:14.465784012 +0200
+@@ -29,10 +29,6 @@
+ 
+ set_time_limit(300);
+ 
+-// override the default PHP 8Mb as this script tends to use a lot more
+-// and hopefully reduce the support questions a bit..
+-ini_set('memory_limit','64M');
+-
+ if (strstr(PHP_OS, 'WIN')) {
+ 	define('WIN_OS', true);
+ } else {
