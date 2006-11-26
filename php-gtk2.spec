@@ -63,7 +63,7 @@ oparta na PHP 5.1 i GTK+ 2.6.
 	 --with-phpize=%{_bindir}/phpize
 %configure \
 	--with-php-config=%{_bindir}/php-config
-%{__make}
+%{__make} -j1
 
 %install
 rm -rf $RPM_BUILD_ROOT
