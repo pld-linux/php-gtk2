@@ -1,0 +1,10 @@
+--- php-gtk/config.m4~	2006-06-29 12:44:31.000000000 +0300
++++ php-gtk/config.m4	2006-11-26 23:20:55.317263190 +0200
+@@ -35,6 +35,7 @@
+   AC_PROG_AWK
+   PHP_SUBST(AWK)
+ 
++  PHP="$PHP -dmemory_limit=-1"
+   PHP_SUBST(PHP)
+ 
+   BSD_MAKEFILE=no
