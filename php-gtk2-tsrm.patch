@@ -1,0 +1,18 @@
+--- php-gtk/main/php_gtk_util.c~	2006-12-26 15:45:46.000000000 +0100
++++ php-gtk/main/php_gtk_util.c	2006-12-26 18:19:23.000000000 +0100
+@@ -490,6 +490,7 @@
+ {
+ 	va_list va;
+ 	int retval;
++	TSRMLS_FETCH();
+ 
+ 	RETURN_IF_ZERO_ARGS(argc, format, 0);
+ 
+@@ -504,6 +505,7 @@
+ {
+ 	va_list va;
+ 	int retval;
++	TSRMLS_FETCH();
+ 
+ 	RETURN_IF_ZERO_ARGS(argc, format, 1);
+ 
