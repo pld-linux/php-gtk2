@@ -4,7 +4,7 @@
 %define		_snap		20061226
 %define		_rel	1
 Summary:	PHP language bindings for GTK+ toolkit
-Summary(pl.UTF-8):   Moduł PHP z wiązaniami do GTK+
+Summary(pl.UTF-8):	Moduł PHP z wiązaniami do GTK+
 Name:		php-gtk2
 Version:	0.0.cvs
 Release:	0.%{_snap}.%{_rel}
