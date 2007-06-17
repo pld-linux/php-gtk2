@@ -4,7 +4,6 @@
 #
 %define		_modname	gtk2
 %define		_sysconfdir	/etc/php
-%define		extensionsdir	%(php-config --extension-dir 2>/dev/null)
 %define		_snap		20070617
 %define		_rel	1
 Summary:	PHP language bindings for GTK+ toolkit
@@ -22,9 +21,10 @@ URL:		http://gtk.php.net/
 BuildRequires:	gtk+2-devel
 BuildRequires:	php-devel >= 4:5.1
 BuildRequires:	php-program
-BuildRequires:	rpmbuild(macros) >= 1.322
-%{?requires_php_extension}
+BuildRequires:	rpmbuild(macros) >= 1.344
 Requires:	php-cli
+%{?requires_php_extension}
+Requires:	php-common >= 4:5.0.4
 Provides:	php(gtk2)
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -62,15 +62,15 @@ oparta na PHP 5.1 i GTK+ 2.6.
 
 %build
 ./buildconf \
-	 --with-phpize=%{_bindir}/phpize
+	--with-phpize=%{_bindir}/phpize
 %configure \
 	--with-php-config=%{_bindir}/php-config
 %{__make} -j1
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{extensionsdir}
-install modules/php_gtk2.so $RPM_BUILD_ROOT%{extensionsdir}/%{_modname}.so
+install -d $RPM_BUILD_ROOT%{php_extensiondir}
+install modules/php_gtk2.so $RPM_BUILD_ROOT%{php_extensiondir}/%{_modname}.so
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -78,4 +78,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog AUTHORS TODO2 NEWS
-%attr(755,root,root) %{extensionsdir}/%{_modname}.so
+%attr(755,root,root) %{php_extensiondir}/%{_modname}.so
