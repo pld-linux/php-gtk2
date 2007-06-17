@@ -1,3 +1,7 @@
+#
+# Notes:
+#  - fails to build on Ac: http://bugs.php.net/bug.php?id=41720
+#
 %define		_modname	gtk2
 %define		_sysconfdir	/etc/php
 %define		extensionsdir	%(php-config --extension-dir 2>/dev/null)
