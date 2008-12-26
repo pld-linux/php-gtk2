@@ -1,0 +1,11 @@
+--- php-gtk-2.0.1/build2/build2.mk~	2005-10-10 20:34:39.000000000 +0200
++++ php-gtk-2.0.1/build2/build2.mk	2008-12-26 16:28:57.940486021 +0100
+@@ -10,7 +10,7 @@
+ 
+ aclocal.m4: configure.in acinclude.m4
+ 	@echo rebuilding $@
+-	cat acinclude.m4 ./build/libtool.m4 php_gtk.m4 > $@
++	cat acinclude.m4 /usr/share/aclocal/{libtool,lt~obsolete,ltoptions,ltsugar,ltversion}.m4 php_gtk.m4 > $@
+ 	
+ configure: aclocal.m4 php_gtk.m4 config.m4 $(config_m4_files)
+ 	@echo rebuilding $@
