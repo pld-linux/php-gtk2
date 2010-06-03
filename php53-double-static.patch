@@ -1,0 +1,1627 @@
+--- php-gtk-2.0.1/ext/gtk+/gdk.overrides~	2008-01-23 04:31:43.000000000 +0200
++++ php-gtk-2.0.1/ext/gtk+/gdk.overrides	2010-06-03 18:52:48.355730890 +0300
+@@ -148,7 +148,6 @@
+ 
+ %%
+ add-arginfo GdkColor __construct
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_INFO(0, red)
+     ZEND_ARG_INFO(0, blue)
+@@ -183,7 +182,6 @@
+ 
+ %%
+ add-arginfo GdkColor parse
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, color)
+ ZEND_END_ARG_INFO();
+@@ -310,7 +308,6 @@
+ 
+ %%
+ add-arginfo GdkColormap alloc_color
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_INFO(0, color OR red)
+     ZEND_ARG_INFO(0, blue)
+@@ -357,7 +354,6 @@
+ 
+ %%
+ add-arginfo GdkColormap query_color
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, allocated)
+ ZEND_END_ARG_INFO();
+@@ -423,7 +419,6 @@
+ 
+ %%
+ add-arginfo GdkDevice get_state
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, values)
+     ZEND_ARG_INFO(0, axis)
+@@ -474,7 +469,6 @@
+ 
+ %%
+ add-arginfo GdkDevice get_history
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_OBJ_INFO(0, window, GdkWindow, 0)
+     ZEND_ARG_INFO(0, start)
+@@ -523,7 +517,6 @@
+ 
+ %%
+ add-arginfo GdkDevice get_state
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_OBJ_INFO(0, window, GdkWindow, 0)
+ ZEND_END_ARG_INFO();
+@@ -1284,7 +1277,6 @@
+ 
+ %%
+ add-arginfo GdkEvent get_axis
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, axis_type)
+ ZEND_END_ARG_INFO();
+@@ -1765,7 +1757,6 @@
+ 
+ %%
+ add-arginfo GdkPixbuf __construct
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, colorspace)
+     ZEND_ARG_INFO(0, has_alpha)
+@@ -1800,7 +1791,6 @@
+ 
+ %%
+ add-arginfo GdkPixbuf new_from_xpm_data
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, data)
+ ZEND_END_ARG_INFO();
+@@ -1843,7 +1833,6 @@
+ 
+ %%
+ add-arginfo GdkPixbuf new_from_gd
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, gd)
+ ZEND_END_ARG_INFO();
+@@ -2046,7 +2035,6 @@
+ 
+ %%
+ add-arginfo GdkPixbuf render_pixmap_and_mask
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_INFO(0, alpha_threshold)
+ ZEND_END_ARG_INFO();
+@@ -2085,7 +2073,6 @@
+ 
+ %%
+ add-arginfo GdkPixbuf add_alpha
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_INFO(0, red)
+     ZEND_ARG_INFO(0, green)
+@@ -2150,7 +2137,6 @@
+ 
+ %%
+ add-arginfo GdkPixbuf get_pixel
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, x)
+     ZEND_ARG_INFO(0, y)
+@@ -2220,7 +2206,6 @@
+ 
+ %%
+ add-arginfo GdkPixbuf put_pixel
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 3)
+     ZEND_ARG_INFO(0, x)
+     ZEND_ARG_INFO(0, y)
+@@ -2350,7 +2335,6 @@
+ 
+ %%
+ add-arginfo GdkPixbuf fill
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 1)
+     ZEND_ARG_INFO(0, pixel_or_red)
+     ZEND_ARG_INFO(0, green)
+@@ -2385,7 +2369,6 @@
+ 
+ %%
+ add-arginfo GdkPixbuf fill_area
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 5)
+     ZEND_ARG_INFO(0, x)
+     ZEND_ARG_INFO(0, y)
+@@ -2508,7 +2491,6 @@
+ 
+ %%
+ add-arginfo GdkPixbuf save
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 2)
+     ZEND_ARG_INFO(0, filename)
+     ZEND_ARG_INFO(0, type)
+@@ -2691,7 +2673,6 @@
+ 
+ %%
+ add-arginfo GdkRectangle __construct
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, x)
+     ZEND_ARG_INFO(0, y)
+@@ -2719,7 +2700,6 @@
+ 
+ %%
+ add-arginfo GdkRectangle intersect
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_OBJ_INFO(0, rect, GdkRectangle, 1)
+ ZEND_END_ARG_INFO();
+@@ -2750,7 +2730,6 @@
+ 
+ %%
+ add-arginfo GdkRectangle union
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_OBJ_INFO(0, rect, GdkRectangle, 1)
+ ZEND_END_ARG_INFO();
+--- php-gtk-2.0.1/ext/gtk+/gtk-2.10.overrides	2010-06-03 18:53:18.406145747 +0300
++++ php-gtk-2.0.1/ext/gtk+/gtk-2.10.overrides	2010-06-03 18:57:12.418830705 +0300
+@@ -20,7 +20,6 @@
+ 
+ %%
+ add-arginfo GtkLinkButton set_uri_hook
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, callback)
+ ZEND_END_ARG_INFO();
+@@ -107,7 +106,6 @@
+ 
+ %%
+ add-arginfo GtkStatusIcon position_menu
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_OBJ_INFO(0, menu, GtkMenu, 1)
+     ZEND_ARG_OBJ_INFO(0, statusicon, GtkStatusIcon, 1)
+@@ -225,7 +223,6 @@
+ 
+ %%
+ add-arginfo GtkRecentInfo get_application_info
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, app_name)
+ ZEND_END_ARG_INFO();
+@@ -309,7 +306,6 @@
+ 
+ %%
+ add-arginfo GtkRecentChooser set_sort_func
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, callback)
+ ZEND_END_ARG_INFO();
+@@ -497,7 +493,6 @@
+ 
+ %%
+ add-arginfo GtkRecentChooserDialog __construct
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_INFO(0, title)
+     ZEND_ARG_OBJ_INFO(0, parent, GtkWindow, 1)
+@@ -571,7 +566,6 @@
+ 
+ %%
+ add-arginfo GtkAssistant set_forward_page_func
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, callback)
+ ZEND_END_ARG_INFO();
+--- php-gtk-2.0.1/ext/gtk+/gtk-2.12.overrides	2010-06-03 18:53:31.325312436 +0300
++++ php-gtk-2.0.1/ext/gtk+/gtk-2.12.overrides	2010-06-03 18:57:20.828830451 +0300
+@@ -46,7 +46,6 @@
+ 
+ %%
+ add-arginfo GtkBuilder add_from_string
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 1)
+     ZEND_ARG_INFO(0, string)
+ ZEND_END_ARG_INFO();
+@@ -238,7 +237,6 @@
+ 
+ %%
+ add-arginfo GtkBuilder connect_signals_instance
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, object)
+ ZEND_END_ARG_INFO();
+@@ -274,7 +272,6 @@
+ 
+ %%
+ add-arginfo GtkIconView get_tooltip_context
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 3)
+     ZEND_ARG_INFO(0, x)
+     ZEND_ARG_INFO(0, y)
+@@ -313,7 +310,6 @@
+ 
+ %%
+ add-arginfo GtkTreeView get_tooltip_context
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 3)
+     ZEND_ARG_INFO(0, x)
+     ZEND_ARG_INFO(0, y)
+@@ -356,7 +352,6 @@
+ 
+ %%
+ add-arginfo GtkScaleButton __construct
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_INFO(0, iconsize)
+     ZEND_ARG_INFO(0, min)
+--- php-gtk-2.0.1/ext/gtk+/gtkdrag.overrides	2010-06-03 18:53:42.385310122 +0300
++++ php-gtk-2.0.1/ext/gtk+/gtkdrag.overrides	2010-06-03 19:00:18.358812130 +0300
+@@ -7,7 +7,6 @@
+ 
+ %%
+ add-arginfo GtkWidget drag_dest_set
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, flags)
+     ZEND_ARG_INFO(0, targets)
+@@ -71,7 +70,6 @@
+ 
+ %%
+ add-arginfo GtkWidget drag_begin
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, targets)
+     ZEND_ARG_INFO(0, actions)
+@@ -146,7 +144,6 @@
+ 
+ %%
+ add-arginfo GtkWidget drag_dest_set_target_list
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, targets)
+ ZEND_END_ARG_INFO();
+@@ -176,7 +173,6 @@
+ 
+ %%
+ add-arginfo GtkWidget drag_dest_find_target
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 1)
+     ZEND_ARG_OBJ_INFO(0, context, GdkDragContext, 1)
+     ZEND_ARG_INFO(0, targets)
+@@ -219,7 +215,6 @@
+ 
+ %%
+ add-arginfo GtkWidget drag_source_set
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, sbmask)
+     ZEND_ARG_INFO(0, targets)
+@@ -289,7 +284,6 @@
+ 
+ %%
+ add-arginfo GtkWidget drag_source_set_target_list
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, targets)
+ ZEND_END_ARG_INFO();
+--- php-gtk-2.0.1/ext/gtk+/gtk.overrides	2010-06-03 18:54:17.635306527 +0300
++++ php-gtk-2.0.1/ext/gtk+/gtk.overrides	2010-06-03 18:58:15.402047813 +0300
+@@ -226,7 +226,6 @@
+ 
+ %%
+ add-arginfo Gtk timeout_add
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, interval)
+     ZEND_ARG_INFO(0, callback)
+@@ -282,7 +281,6 @@
+ 
+ %%
+ add-arginfo Gtk timeout_add_priority
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, interval)
+     ZEND_ARG_INFO(0, priority)
+@@ -369,7 +367,6 @@
+ 
+ %%
+ add-arginfo Gtk quit_add
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, main_level)
+     ZEND_ARG_INFO(0, callback)
+@@ -538,7 +535,6 @@
+ 
+ %%
+ add-arginfo Gtk icon_size_lookup
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, size)
+ ZEND_END_ARG_INFO();
+@@ -566,7 +562,6 @@
+ 
+ %%
+ add-arginfo Gtk icon_size_lookup_for_settings
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_OBJ_INFO(0, settings, GtkSettings, 0)
+     ZEND_ARG_INFO(0, size)
+@@ -643,7 +638,6 @@
+ 
+ %%
+ add-arginfo Gtk stock_lookup
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, stock_id)
+ ZEND_END_ARG_INFO();
+@@ -783,7 +777,6 @@
+ 
+ %%
+ add-arginfo GtkAccelGroup find
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, callback)
+ ZEND_END_ARG_INFO();
+@@ -985,7 +978,6 @@
+ 
+ %%
+ add-arginfo GtkAboutDialog set_artists
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, artists)
+ ZEND_END_ARG_INFO();
+@@ -1024,7 +1016,6 @@
+ 
+ %%
+ add-arginfo GtkAboutDialog set_authors
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, authors)
+ ZEND_END_ARG_INFO();
+@@ -1063,7 +1054,6 @@
+ 
+ %%
+ add-arginfo GtkAboutDialog set_documenters
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, documenters)
+ ZEND_END_ARG_INFO();
+@@ -1102,7 +1092,6 @@
+ 
+ %%
+ add-arginfo GtkAboutDialog set_email_hook
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, callback)
+ ZEND_END_ARG_INFO();
+@@ -1184,7 +1173,6 @@
+ 
+ %%
+ add-arginfo GtkAboutDialog set_url_hook
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, callback)
+ ZEND_END_ARG_INFO();
+@@ -1216,7 +1204,6 @@
+ 
+ %%
+ add-arginfo GtkAboutDialog set_website_label
+-static
+ ZEND_BEGIN_ARG_INFO(arginfo_gtk_gtkaboutdialog_set_website_label, 0)
+     ZEND_ARG_INFO(0, website_label)
+ ZEND_END_ARG_INFO();
+@@ -1250,7 +1237,6 @@
+ 
+ %%
+ add-arginfo GtkAdjustment __construct
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, value)
+     ZEND_ARG_INFO(0, lower)
+@@ -1314,7 +1300,6 @@
+ 
+ %%
+ add-arginfo GtkBox query_child_packing
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_OBJ_INFO(0, child, GtkWidget, 1)
+ ZEND_END_ARG_INFO();
+@@ -1343,7 +1328,6 @@
+ 
+ %%
+ add-arginfo GtkButton __construct
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_INFO(0, text)
+     ZEND_ARG_INFO(0, use_underline)
+@@ -1379,7 +1363,6 @@
+ 
+ %%
+ add-arginfo GtkButton new_from_stock
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, stock_id)
+ ZEND_END_ARG_INFO();
+@@ -1487,7 +1470,6 @@
+ %% {{{ GtkCheckButton
+ %%
+ add-arginfo GtkCheckButton __construct
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_INFO(0, text)
+     ZEND_ARG_INFO(0, use_underline)
+@@ -1525,7 +1507,6 @@
+ %% {{{ GtkCheckMenuItem
+ %%
+ add-arginfo GtkCheckMenuItem __construct
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_INFO(0, text)
+     ZEND_ARG_INFO(0, use_underline)
+@@ -1571,7 +1552,6 @@
+ 
+ %%
+ add-arginfo GtkCList __construct
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_INFO(0, columns)
+     ZEND_ARG_INFO(0, titles)
+@@ -1797,7 +1777,6 @@
+ 
+ %%
+ add-arginfo GtkCList get_selection_info
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, x)
+     ZEND_ARG_INFO(0, y)
+@@ -1829,7 +1808,6 @@
+ 
+ %%
+ add-arginfo GtkCList remove_row
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, row)
+ ZEND_END_ARG_INFO();
+@@ -1939,7 +1917,6 @@
+ 
+ %%
+ add-arginfo GtkColorSelection set_color
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 3)
+     ZEND_ARG_INFO(0, red)
+     ZEND_ARG_INFO(0, green)
+@@ -2011,7 +1988,6 @@
+ 
+ %%
+ add-arginfo GtkColorSelection set_change_palette_with_screen_hook
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, callback)
+ ZEND_END_ARG_INFO();
+@@ -2088,7 +2064,6 @@
+ 
+ %%
+ add-arginfo GtkCombo set_popdown_strings
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, strings)
+ ZEND_END_ARG_INFO();
+@@ -2138,7 +2113,6 @@
+ 
+ %%
+ add-arginfo GtkComboBox __construct
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_INFO(0, model)
+ ZEND_END_ARG_INFO();
+@@ -2186,7 +2160,6 @@
+ 
+ %%
+ add-arginfo GtkComboBox set_row_separator_func
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, callback)
+ ZEND_END_ARG_INFO();
+@@ -2226,7 +2199,6 @@
+ 
+ %%
+ add-arginfo GtkComboBoxEntry __construct
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_INFO(0, model)
+     ZEND_ARG_INFO(0, text_column)
+@@ -2265,7 +2237,6 @@
+ 
+ %%
+ add-arginfo GtkCTree __construct
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_INFO(0, columns)
+     ZEND_ARG_INFO(0, tree_column)
+@@ -2434,7 +2405,6 @@
+ 
+ %%
+ add-arginfo GtkCTree row_is_ancestor
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_OBJ_INFO(0, node, GtkCTreeNode, 1)
+     ZEND_ARG_OBJ_INFO(0, child, GtkCTreeNode, 1)
+@@ -2538,7 +2508,6 @@
+ 
+ %%
+ add-arginfo GtkDialog __construct
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_INFO(0, title)
+     ZEND_ARG_OBJ_INFO(0, parent, GtkWindow, 1)
+@@ -2629,7 +2598,6 @@
+ 
+ %%
+ add-arginfo GtkDialog add_buttons
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, buttons)
+ ZEND_END_ARG_INFO();
+@@ -2696,7 +2664,6 @@
+ 
+ %%
+ add-arginfo GtkEditable insert_text
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, text)
+     ZEND_ARG_INFO(0, position)
+@@ -2729,7 +2696,6 @@
+ 
+ %%
+ add-arginfo GtkEntry __construct
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_INFO(0, text)
+     ZEND_ARG_INFO(0, max_length)
+@@ -2815,7 +2781,6 @@
+ 
+ %%
+ add-arginfo GtkEntry set_invisible_char
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, char)
+ ZEND_END_ARG_INFO();
+@@ -2846,7 +2811,6 @@
+ 
+ %%
+ add-arginfo GtkEntryCompletion set_match_func
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, callback)
+ ZEND_END_ARG_INFO();
+@@ -2947,7 +2911,6 @@
+ 
+ %%
+ add-arginfo GtkFileFilter add_custom
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, flags_needed)
+     ZEND_ARG_INFO(0, callback)
+@@ -3090,7 +3053,6 @@
+ 
+ %%
+ add-arginfo GtkFileFilter filter
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, filterinfo)
+ ZEND_END_ARG_INFO();
+@@ -3180,7 +3142,6 @@
+ 
+ %%
+ add-arginfo GtkFileSelection get_filename
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_INFO(0, convert)
+ ZEND_END_ARG_INFO();
+@@ -3223,7 +3184,6 @@
+ 
+ %%
+ add-arginfo GtkFileSelection get_selections
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_INFO(0, convert)
+ ZEND_END_ARG_INFO();
+@@ -3276,7 +3236,6 @@
+ 
+ %%
+ add-arginfo GtkFileChooser get_filename
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_INFO(0, convert)
+ ZEND_END_ARG_INFO();
+@@ -3318,7 +3277,6 @@
+ 
+ %%
+ add-arginfo GtkFileChooser get_filenames
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_INFO(0, convert)
+ ZEND_END_ARG_INFO();
+@@ -3405,7 +3363,6 @@
+ 
+ %%
+ add-arginfo GtkFileChooser list_shortcut_folders
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_INFO(0, convert)
+ ZEND_END_ARG_INFO();
+@@ -3450,7 +3407,6 @@
+ 
+ %%
+ add-arginfo GtkFileChooser list_shortcut_folder_uris
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_INFO(0, convert)
+ ZEND_END_ARG_INFO();
+@@ -3499,7 +3455,6 @@
+ 
+ %%
+ add-arginfo GtkFileChooserDialog __construct
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_INFO(0, title)
+     ZEND_ARG_OBJ_INFO(0, parent, GtkWindow, 1)
+@@ -3641,7 +3596,6 @@
+ 
+ %%
+ add-arginfo GtkIconTheme set_search_path
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 1)
+     ZEND_ARG_ARRAY_INFO(0, search_paths, 0)
+ ZEND_END_ARG_INFO();
+@@ -3789,7 +3743,6 @@
+ 
+ %%
+ add-arginfo GtkIconView __construct
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_OBJ_INFO(0, model, GtkTreeModel, 0)
+ ZEND_END_ARG_INFO();
+@@ -3846,7 +3799,6 @@
+ 
+ %%
+ add-arginfo GtkIconView selected_foreach
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, callback)
+ ZEND_END_ARG_INFO();
+@@ -4106,7 +4058,6 @@
+ %% {{{ GtkImageMenuItem
+ %%
+ add-arginfo GtkImageMenuItem __construct
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_INFO(0, stock_id)
+     ZEND_ARG_OBJ_INFO(0, accel_group, GtkAccelGroup, 1)
+@@ -4152,7 +4103,6 @@
+ %% {{{ GtkLabel
+ %%
+ add-arginfo GtkLabel __construct
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_INFO(0, text)
+     ZEND_ARG_INFO(0, use_underline)
+@@ -4257,7 +4207,6 @@
+ 
+ %%
+ add-arginfo GtkListItem __construct
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_INFO(0, label)
+ ZEND_END_ARG_INFO();
+@@ -4298,7 +4247,6 @@
+ 
+ %%
+ add-arginfo GtkMenu set_menu_accel_path
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, accel_path)
+ ZEND_END_ARG_INFO();
+@@ -4322,7 +4270,6 @@
+ 
+ %%
+ add-arginfo GtkMenu popup
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_OBJ_INFO(0, parent_menu_shell, GtkWidget, 1)
+     ZEND_ARG_OBJ_INFO(0, parent_menu_item, GtkWidget, 1)
+@@ -4416,7 +4363,6 @@
+ 
+ %%
+ add-arginfo GtkMenuItem set_item_accel_path
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, accel_path)
+ ZEND_END_ARG_INFO();
+@@ -4457,7 +4403,6 @@
+ %% {{{ GtkMessageDialog
+ %%
+ add-arginfo GtkMessageDialog __construct
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_OBJ_INFO(0, parent, GtkWindow, 1)
+     ZEND_ARG_INFO(0, flags)
+@@ -4526,7 +4471,6 @@
+ %% {{{ GtkMenuItem
+ %%
+ add-arginfo GtkMenuItem __construct
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_INFO(0, text)
+     ZEND_ARG_INFO(0, use_underline)
+@@ -4609,7 +4553,6 @@
+ 
+ %%
+ add-arginfo GtkNotebook query_tab_label_packing
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_OBJ_INFO(0, child, GtkWidget, 1)
+ ZEND_END_ARG_INFO();
+@@ -4637,7 +4580,6 @@
+ 
+ %%
+ add-arginfo GtkPlug __construct
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 1)
+     ZEND_ARG_INFO(0, socket_id)
+     ZEND_ARG_OBJ_INFO(0, display, GdkDisplay, 1)
+@@ -4703,7 +4645,6 @@
+ 
+ %%
+ add-arginfo GtkProgressBar __construct
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_OBJ_INFO(0, adjustment, GtkAdjustment, 1)
+ ZEND_END_ARG_INFO();
+@@ -4789,7 +4730,6 @@
+ 
+ %%
+ add-arginfo GtkRadioButton __construct
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_OBJ_INFO(0, group, GtkRadioButton, 1)
+     ZEND_ARG_INFO(0, text)
+@@ -4897,7 +4837,6 @@
+ %% {{{ GtkRadioMenuItem
+ %%
+ add-arginfo GtkRadioMenuItem __construct
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_OBJ_INFO(0, group, GtkRadioMenuItem, 1)
+     ZEND_ARG_INFO(0, text)
+@@ -4952,7 +4891,6 @@
+ 
+ %%
+ add-arginfo GtkRadioMenuItem new_from_widget
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_INFO(0, text)
+     ZEND_ARG_INFO(0, use_underline)
+@@ -4986,7 +4924,6 @@
+ 
+ %%
+ add-arginfo GtkRadioMenuItem set_group
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_OBJ_INFO(0, group, GtkRadioMenuItem, 1)
+ ZEND_END_ARG_INFO();
+@@ -5040,7 +4977,6 @@
+ %% {{{ GtkRadioToolButton
+ %%
+ add-arginfo GtkRadioToolButton __construct
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_OBJ_INFO(0, group, GtkRadioToolButton, 1)
+     ZEND_ARG_INFO(0, stock_id)
+@@ -5112,7 +5048,6 @@
+ 
+ %%
+ add-arginfo GtkRadioToolButton set_group
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 1)
+     ZEND_ARG_OBJ_INFO(0, group, GtkRadioToolButton, 1)
+ ZEND_END_ARG_INFO();
+@@ -5234,7 +5169,6 @@
+ 
+ %%
+ add-arginfo GtkSelectionData set_uris
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, uris)
+ ZEND_END_ARG_INFO();
+@@ -5313,7 +5247,6 @@
+ 
+ %%
+ add-arginfo GtkStatusbar remove_message
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, context_id)
+     ZEND_ARG_INFO(0, message_id)
+@@ -5425,7 +5358,6 @@
+ %% {{{ GtkToggleButton
+ %%
+ add-arginfo GtkToggleButton __construct
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_INFO(0, text)
+     ZEND_ARG_INFO(0, use_underline)
+@@ -5464,7 +5396,6 @@
+ 
+ %%
+ add-arginfo GtkToolbar append_item
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, text)
+     ZEND_ARG_INFO(0, tooltip_text)
+@@ -5553,7 +5484,6 @@
+ 
+ %%
+ add-arginfo GtkToolbar prepend_item
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, text)
+     ZEND_ARG_INFO(0, tooltip_text)
+@@ -5615,7 +5545,6 @@
+ 
+ %%
+ add-arginfo GtkToolbar set_toolbar_style
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, style)
+ ZEND_END_ARG_INFO();
+@@ -5645,7 +5574,6 @@
+ 
+ %%
+ add-arginfo GtkUIManager add_ui_from_string
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, text)
+ ZEND_END_ARG_INFO();
+@@ -5675,7 +5603,6 @@
+ 
+ %%
+ add-arginfo GtkUIManager get_toplevels
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, types)
+ ZEND_END_ARG_INFO();
+@@ -5821,7 +5748,6 @@
+ 
+ %%
+ add-arginfo GtkWidget intersect
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_OBJ_INFO(0, area, GdkRectangle, 1)
+ ZEND_END_ARG_INFO();
+@@ -5910,7 +5836,6 @@
+ 
+ %%
+ add-arginfo GtkWidget size_allocate
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, allocation)
+ ZEND_END_ARG_INFO();
+@@ -5937,7 +5862,6 @@
+ 
+ %%
+ add-arginfo GtkWidget translate_coordinates
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_OBJ_INFO(0, dest_widget, GtkWidget, 0)
+     ZEND_ARG_INFO(0, src_x)
+@@ -5965,7 +5889,6 @@
+ 
+ %%
+ add-arginfo GtkWidget set_visible
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 1)
+     ZEND_ARG_INFO(0, visible)
+     ZEND_ARG_INFO(0, all)
+@@ -6019,7 +5942,6 @@
+ 
+ %%
+ add-arginfo GtkWidget style_get_property
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, property_name)
+ ZEND_END_ARG_INFO();
+@@ -6242,7 +6164,6 @@
+ 
+ %%
+ add-arginfo GtkWindow set_default_icon_list
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, pixbufs)
+ ZEND_END_ARG_INFO();
+@@ -6281,7 +6202,6 @@
+ 
+ %%
+ add-arginfo GtkWindow set_geometry_hints
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_OBJ_INFO(0, widget, GtkWidget, 0)
+     ZEND_ARG_INFO(0, min_width)
+@@ -6372,7 +6292,6 @@
+ 
+ %%
+ add-arginfo GtkWindow set_icon_list
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, pixbufs)
+ ZEND_END_ARG_INFO();
+@@ -6413,7 +6332,6 @@
+ 
+ %%
+ add-arginfo GtkWindow window_mnemonic_activate
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, keyval)
+     ZEND_ARG_INFO(0, modifier)
+--- php-gtk-2.0.1/ext/gtk+/gtktreeview.overrides	2010-06-03 18:54:37.402058059 +0300
++++ php-gtk-2.0.1/ext/gtk+/gtktreeview.overrides	2010-06-03 19:01:05.488599751 +0300
+@@ -63,7 +63,6 @@
+ %% {{{ GtkCellLayout
+ %%
+ add-arginfo GtkCellLayout set_attributes
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 1)
+     ZEND_ARG_INFO(0, cell)
+     ZEND_ARG_INFO(0, attribute)
+@@ -121,7 +120,6 @@
+ 
+ %%
+ add-arginfo GtkCellLayout set_cell_data_func
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_OBJ_INFO(0, cellrenderer, GtkCellRenderer, 1)
+     ZEND_ARG_INFO(0, callback)
+@@ -171,7 +169,6 @@
+ 
+ %%
+ add-arginfo GtkCellRenderer get_size
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, widget)
+ ZEND_END_ARG_INFO();
+@@ -226,7 +223,6 @@
+ 
+ %%
+ add-arginfo GtkCellView get_size_of_row
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, path)
+ ZEND_END_ARG_INFO();
+@@ -262,7 +258,6 @@
+ %% {{{ GtkListStore
+ %%
+ add-arginfo GtkListStore __construct
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_INFO(0, type_col_0)
+     ZEND_ARG_INFO(0, type_col_1)
+@@ -347,7 +342,6 @@
+ 
+ %%
+ add-arginfo GtkListStore append
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_INFO(0, items)
+ ZEND_END_ARG_INFO();
+@@ -374,7 +368,6 @@
+ 
+ %%
+ add-arginfo GtkListStore prepend
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_INFO(0, items)
+ ZEND_END_ARG_INFO();
+@@ -401,7 +394,6 @@
+ 
+ %%
+ add-arginfo GtkListStore insert
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 1)
+     ZEND_ARG_INFO(0, position)
+     ZEND_ARG_INFO(0, items)
+@@ -582,7 +574,6 @@
+ 
+ %%
+ add-arginfo GtkListStore set
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 3)
+     ZEND_ARG_OBJ_INFO(0, iter, GtkTreeIter, 1)
+     ZEND_ARG_INFO(0, column)
+@@ -753,7 +744,6 @@
+ %% {{{ GtkTreeStore
+ %%
+ add-arginfo GtkTreeStore __construct
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 1)
+     ZEND_ARG_INFO(0, type_col_0)
+     ZEND_ARG_INFO(0, type_col_1)
+@@ -838,7 +828,6 @@
+ 
+ %%
+ add-arginfo GtkTreeStore append
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_OBJ_INFO(0, iter, GtkTreeIter, 1)
+     ZEND_ARG_INFO(0, items)
+@@ -873,7 +862,6 @@
+ 
+ %%
+ add-arginfo GtkTreeStore insert
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 1)
+     ZEND_ARG_INFO(0, position)
+     ZEND_ARG_OBJ_INFO(0, parent, GtkTreeIter, 1)
+@@ -910,7 +898,6 @@
+ 
+ %%
+ add-arginfo GtkTreeStore insert_before
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_OBJ_INFO(0, parent, GtkTreeIter, 1)
+     ZEND_ARG_OBJ_INFO(0, sibling, GtkTreeIter, 1)
+@@ -949,7 +936,6 @@
+ 
+ %%
+ add-arginfo GtkTreeStore insert_after
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_OBJ_INFO(0, parent, GtkTreeIter, 1)
+     ZEND_ARG_OBJ_INFO(0, sibling, GtkTreeIter, 1)
+@@ -988,7 +974,6 @@
+ 
+ %%
+ add-arginfo GtkTreeStore prepend
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_OBJ_INFO(0, iter, GtkTreeIter, 1)
+     ZEND_ARG_INFO(0, items)
+@@ -1022,7 +1007,6 @@
+ 
+ %%
+ add-arginfo GtkTreeStore set
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 3)
+     ZEND_ARG_OBJ_INFO(0, iter, GtkTreeIter, 1)
+     ZEND_ARG_INFO(0, column)
+@@ -1128,7 +1112,6 @@
+ 
+ %%
+ add-arginfo GtkTreeModel get_iter
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, treepath)
+ ZEND_END_ARG_INFO();
+@@ -1178,7 +1161,6 @@
+ 
+ %%
+ add-arginfo GtkTreeModel get_iter_from_string
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, path)
+ ZEND_END_ARG_INFO();
+@@ -1204,7 +1186,6 @@
+ 
+ %%
+ add-arginfo GtkTreeModel get_value
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_OBJ_INFO(0, iter, GtkTreeIter, 1)
+     ZEND_ARG_INFO(0, column)
+@@ -1242,7 +1223,6 @@
+ 
+ %%
+ add-arginfo GtkTreeModel iter_children
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_OBJ_INFO(0, parent_iter, GtkTreeIter, 1)
+ ZEND_END_ARG_INFO();
+@@ -1273,7 +1253,6 @@
+ 
+ %%
+ add-arginfo GtkTreeModel iter_nth_child
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_OBJ_INFO(0, parent_iter, GtkTreeIter, 1)
+     ZEND_ARG_INFO(0, n)
+@@ -1306,7 +1285,6 @@
+ 
+ %%
+ add-arginfo GtkTreeModel iter_parent
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_OBJ_INFO(0, iter, GtkTreeIter, 1)
+ ZEND_END_ARG_INFO();
+@@ -1338,7 +1316,6 @@
+ 
+ %%
+ add-arginfo GtkTreeModel iter_next
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_OBJ_INFO(0, iter, GtkTreeIter, 1)
+ ZEND_END_ARG_INFO();
+@@ -1366,7 +1343,6 @@
+ 
+ %%
+ add-arginfo GtkTreeModel foreach
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, callback)
+ ZEND_END_ARG_INFO();
+@@ -1566,7 +1542,6 @@
+ 
+ %%
+ add-arginfo GtkTreeModelFilter __construct
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 1)
+     ZEND_ARG_OBJ_INFO(0, model, GtkTreeModel, 1)
+     ZEND_ARG_INFO(0, root)
+@@ -1606,7 +1581,6 @@
+ 
+ %%
+ add-arginfo GtkTreeModelFilter convert_child_iter_to_iter
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_OBJ_INFO(0, child_iter, GtkTreeIter, 1)
+ ZEND_END_ARG_INFO();
+@@ -1638,7 +1612,6 @@
+ 
+ %%
+ add-arginfo GtkTreeModelFilter convert_iter_to_child_iter
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_OBJ_INFO(0, filter_iter, GtkTreeIter, 1)
+ ZEND_END_ARG_INFO();
+@@ -1670,7 +1643,6 @@
+ 
+ %%
+ add-arginfo GtkTreeModelFilter set_visible_func
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, callback)
+ ZEND_END_ARG_INFO();
+@@ -1745,7 +1717,6 @@
+ 
+ %%
+ add-arginfo GtkTreeModelSort convert_child_iter_to_iter
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_OBJ_INFO(0, child_iter, GtkTreeIter, 1)
+ ZEND_END_ARG_INFO();
+@@ -1777,7 +1748,6 @@
+ 
+ %%
+ add-arginfo GtkTreeModelSort convert_iter_to_child_iter
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_OBJ_INFO(0, sort_iter, GtkTreeIter, 1)
+ ZEND_END_ARG_INFO();
+@@ -1877,7 +1847,6 @@
+ 
+ %%
+ add-arginfo GtkTreeSelection selected_foreach
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, callback)
+ ZEND_END_ARG_INFO();
+@@ -1947,7 +1916,6 @@
+ 
+ %%
+ add-arginfo GtkTreeSelection set_select_function
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, callback)
+ ZEND_END_ARG_INFO();
+@@ -2058,7 +2026,6 @@
+ 
+ %%
+ add-arginfo GtkTreeSortable set_default_sort_func
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, callback)
+ ZEND_END_ARG_INFO();
+@@ -2089,7 +2056,6 @@
+ 
+ %%
+ add-arginfo GtkTreeSortable set_sort_func
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, column)
+     ZEND_ARG_INFO(0, callback)
+@@ -2172,7 +2138,6 @@
+ 
+ %%
+ add-arginfo GtkTreeView enable_model_drag_source
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, sbmask)
+     ZEND_ARG_INFO(0, targets)
+@@ -2210,7 +2175,6 @@
+ 
+ %%
+ add-arginfo GtkTreeView enable_model_drag_dest
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, targets)
+     ZEND_ARG_INFO(0, actions)
+@@ -2263,7 +2227,6 @@
+ 
+ %%
+ add-arginfo GtkTreeView set_column_drag_function
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, callback)
+ ZEND_END_ARG_INFO();
+@@ -2349,7 +2312,6 @@
+ 
+ %%
+ add-arginfo GtkTreeView set_row_separator_func
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, callback)
+ ZEND_END_ARG_INFO();
+@@ -2429,7 +2391,6 @@
+ }
+ 
+ %%add-arginfo GtkTreeView insert_column_with_data_func
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, position)
+     ZEND_ARG_INFO(0, title)
+@@ -2511,7 +2472,6 @@
+ 
+ 
+ %%add-arginfo GtkTreeView get_background_area
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, path)
+     ZEND_ARG_OBJ_INFO(0, column, GtkTreeViewColumn, 1)
+@@ -2545,7 +2505,6 @@
+ }
+ 
+ %%add-arginfo GtkTreeView get_cell_area
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, path)
+     ZEND_ARG_OBJ_INFO(0, column, GtkTreeViewColumn, 1)
+@@ -2613,7 +2572,6 @@
+ 
+ %%
+ add-arginfo GtkTreeView get_path_at_pos
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, x)
+     ZEND_ARG_INFO(0, y)
+@@ -2658,7 +2616,6 @@
+ 
+ %%
+ add-arginfo GtkTreeView get_dest_row_at_pos
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, x)
+     ZEND_ARG_INFO(0, y)
+@@ -2740,7 +2697,6 @@
+ 
+ %%
+ add-arginfo GtkTreeView set_search_equal_func
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, callback)
+ ZEND_END_ARG_INFO();
+@@ -2841,7 +2797,6 @@
+ 
+ %%
+ add-arginfo GtkTreeView tree_to_widget_coords
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, tx)
+     ZEND_ARG_INFO(0, ty)
+@@ -2865,7 +2820,6 @@
+ 
+ %%
+ add-arginfo GtkTreeView widget_to_tree_coords
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, wx)
+     ZEND_ARG_INFO(0, wy)
+@@ -2892,7 +2846,6 @@
+ 
+ %%
+ add-arginfo GtkTreeViewColumn __construct
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_INFO(0, title)
+     ZEND_ARG_OBJ_INFO(0, cellrenderer, GtkCellRenderer, 1)
+@@ -2972,7 +2925,6 @@
+ 
+ %%
+ add-arginfo GtkTreeViewColumn cell_get_position
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_OBJ_INFO(0, cellrenderer, GtkCellRenderer, 1)
+ ZEND_END_ARG_INFO();
+--- php-gtk-2.0.1/ext/gtk+/pango.overrides~	2007-02-06 20:20:30.000000000 +0200
++++ php-gtk-2.0.1/ext/gtk+/pango.overrides	2010-06-03 18:54:44.476390466 +0300
+@@ -25,7 +25,6 @@
+ 
+ %%
+ add-arginfo PangoFontDescription __construct
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_INFO(0, str)
+ ZEND_END_ARG_INFO();
+--- php-gtk-2.0.1/ext/libglade/libglade.overrides	2010-06-03 18:54:52.948636987 +0300
++++ php-gtk-2.0.1/ext/libglade/libglade.overrides	2010-06-03 19:01:16.896514524 +0300
+@@ -35,7 +35,6 @@
+ 
+ %%
+ add-arginfo GladeXML __construct
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 1)
+     ZEND_ARG_INFO(0, filename)
+     ZEND_ARG_INFO(0, root)
+@@ -69,7 +68,6 @@
+ 
+ %%
+ add-arginfo GladeXML new_from_buffer
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 1)
+     ZEND_ARG_INFO(0, buffer)
+     ZEND_ARG_INFO(0, root)
+@@ -100,7 +98,6 @@
+ 
+ %%
+ add-arginfo GladeXML get_widget_prefix
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, prefix)
+ ZEND_END_ARG_INFO();
+@@ -335,7 +332,6 @@
+ 
+ %%
+ add-arginfo GladeXML signal_autoconnect_instance
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, object)
+ ZEND_END_ARG_INFO();
+--- php-gtk-2.0.1/ext/sourceview/sourceview.overrides	2010-06-03 18:55:06.395302513 +0300
++++ php-gtk-2.0.1/ext/sourceview/sourceview.overrides	2010-06-03 19:01:29.458805074 +0300
+@@ -63,7 +63,6 @@
+ 
+ %%
+ add-arginfo GtkSourceBuffer set_escape_char
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, char)
+ ZEND_END_ARG_INFO();
+@@ -114,7 +113,6 @@
+ 
+ %%
+ add-arginfo GtkSourceLanguagesManager get_lang_files_dirs
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_INFO(0, convert)
+ ZEND_END_ARG_INFO();
+@@ -243,7 +241,6 @@
+ 
+ %%
+ add-arginfo GtkSourceStyleScheme get_style_names
+-static
+ ZEND_BEGIN_ARG_INFO_EX(ARGINFO_NAME, 0, 0, 0)
+     ZEND_ARG_INFO(0, convert)
+ ZEND_END_ARG_INFO();
+--- php-gtk-2.0.1/ext/gtk+/atk.overrides~	2006-06-24 20:06:44.000000000 +0300
++++ php-gtk-2.0.1/ext/gtk+/atk.overrides	2010-06-03 18:56:59.991957447 +0300
+@@ -14,7 +14,6 @@
+ 
+ %%
+ add-arginfo AtkRelation __construct
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, targets)
+     ZEND_ARG_INFO(0, relationship)
+--- php-gtk-2.0.1/ext/gtk+/gtk-2.8.overrides~	2008-04-29 18:40:17.000000000 +0300
++++ php-gtk-2.0.1/ext/gtk+/gtk-2.8.overrides	2010-06-03 18:57:30.121954914 +0300
+@@ -16,7 +16,6 @@
+ 
+ %%
+ add-arginfo GtkIconView enable_model_drag_source
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, sbmask)
+     ZEND_ARG_INFO(0, targets)
+@@ -54,7 +53,6 @@
+ 
+ %%
+ add-arginfo GtkIconView enable_model_drag_dest
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, targets)
+     ZEND_ARG_INFO(0, actions)
+@@ -118,7 +116,6 @@
+ 
+ %%
+ add-arginfo GtkIconView get_dest_item_at_pos
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, x)
+     ZEND_ARG_INFO(0, y)
+@@ -157,7 +154,6 @@
+ }
+ %%
+ add-arginfo GtkIconView get_item_at_pos
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, x)
+     ZEND_ARG_INFO(0, y)
+--- php-gtk-2.0.1/ext/gtk+/gtkcontainer.overrides~	2006-12-17 23:32:18.000000000 +0200
++++ php-gtk-2.0.1/ext/gtk+/gtkcontainer.overrides	2010-06-03 19:00:05.881951044 +0300
+@@ -36,7 +36,6 @@
+ 
+ %%
+ add-arginfo GtkContainer set_focus_chain
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, widgets)
+ ZEND_END_ARG_INFO();
+--- php-gtk-2.0.1/ext/gtk+/gtktextview.overrides~	2007-02-07 20:57:53.000000000 +0200
++++ php-gtk-2.0.1/ext/gtk+/gtktextview.overrides	2010-06-03 19:00:36.678602732 +0300
+@@ -86,7 +86,6 @@
+ 
+ %%
+ add-arginfo GtkTextBuffer get_iter_at_line
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, line_number)
+ ZEND_END_ARG_INFO();
+@@ -140,7 +139,6 @@
+ 
+ %%
+ add-arginfo GtkTextBuffer get_iter_at_line_offset
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, line_number)
+     ZEND_ARG_INFO(0, char_offset)
+@@ -163,7 +161,6 @@
+ 
+ %%
+ add-arginfo GtkTextBuffer get_iter_at_line_index
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, line_number)
+     ZEND_ARG_INFO(0, byte_offset)
+@@ -186,7 +183,6 @@
+ 
+ %%
+ add-arginfo GtkTextBuffer get_iter_at_offset
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, char_offset)
+ ZEND_END_ARG_INFO();
+@@ -208,7 +204,6 @@
+ 
+ %%
+ add-arginfo GtkTextBuffer set_text
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, text)
+ ZEND_END_ARG_INFO();
+@@ -377,7 +372,6 @@
+ 
+ %%
+ add-arginfo GtkTextIter forward_find_char 
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, callback)
+     ZEND_ARG_OBJ_INFO(0, iter, GtkTextIter, 1)
+@@ -471,7 +465,6 @@
+ 
+ %%
+ add-arginfo GtkTextIter backward_find_char 
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_OBJ_INFO(0, iter, GtkTextIter, 1)
+     ZEND_ARG_INFO(0, callback)
+@@ -544,7 +537,6 @@
+ 
+ %%
+ add-arginfo GtkTextTagTable foreach
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, callback)
+ ZEND_END_ARG_INFO();
+@@ -613,7 +605,6 @@
+ 
+ %%
+ add-arginfo GtkTextView buffer_to_window_coords
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, window_type)
+     ZEND_ARG_INFO(0, buffer_x)
+@@ -643,7 +634,6 @@
+ 
+ %%
+ add-arginfo GtkTextView get_iter_at_location
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, x)
+     ZEND_ARG_INFO(0, y)
+@@ -669,7 +659,6 @@
+ 
+ %%
+ add-arginfo GtkTextView get_iter_at_position
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, x)
+     ZEND_ARG_INFO(0, y)
+@@ -698,7 +687,6 @@
+ 
+ %%
+ add-arginfo GtkTextView get_iter_location
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_OBJ_INFO(0, iter, GtkTextIter, 0)
+ ZEND_END_ARG_INFO();
+@@ -727,7 +715,6 @@
+ 
+ %%
+ add-arginfo GtkTextView get_line_at_y
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, y)
+ ZEND_END_ARG_INFO();
+@@ -755,7 +742,6 @@
+ 
+ %%
+ add-arginfo GtkTextView get_line_yrange
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_OBJ_INFO(0, iter, GtkTextIter, 0)
+ ZEND_END_ARG_INFO();
+@@ -798,7 +784,6 @@
+ 
+ %%
+ add-arginfo GtkTextView window_to_buffer_coords
+-static
+ ZEND_BEGIN_ARG_INFO(ARGINFO_NAME, 0)
+     ZEND_ARG_INFO(0, window_type)
+     ZEND_ARG_INFO(0, window_x)
+--- php-gtk-2.0.1/ext/scintilla/sci_generator.php~	2007-06-16 00:47:49.000000000 +0300
++++ php-gtk-2.0.1/ext/scintilla/sci_generator.php	2010-06-03 19:02:57.765255271 +0300
+@@ -535,7 +535,7 @@
+ 		foreach($arginfo as $info){
+ 			if(isset($info['vars']) && count($info['vars'])>0){
+ 				$name = $info['name'];
+-				$sfp->write("\nstatic\nZEND_BEGIN_ARG_INFO($name, 0)\n");
++				$sfp->write("\nZEND_BEGIN_ARG_INFO($name, 0)\n");
+ 				foreach($info['vars'] as $var){
+ 					$sfp->write("\t$var\n");
+ 				}
+--- php-gtk-2.0.1/generator/templates.php~	2008-03-12 17:46:45.000000000 +0200
++++ php-gtk-2.0.1/generator/templates.php	2010-06-03 19:06:55.508689305 +0300
+@@ -301,11 +301,9 @@
+ const register_enum = "\tphpg_register_%s(%s, strip_prefix, %s);\n";
+ 
+ const reflection_arginfo_begin = "
+-static
+ ZEND_BEGIN_ARG_INFO(%s, 0)
+ ";
+ const reflection_arginfoex_begin = "
+-static
+ ZEND_BEGIN_ARG_INFO_EX(%s, 0, 0, %d)
+ ";
+ const reflection_arginfo_end = "ZEND_END_ARG_INFO();

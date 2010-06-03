@@ -13,6 +13,7 @@ Source0:	http://gtk.php.net/distributions/php-gtk-%{version}.tar.gz
 # Source0-md5:	d57ce885f32749320765e01c079e113b
 Patch0:		%{name}-object.patch
 Patch1:		%{name}-libtool.patch
+Patch2:		php53-double-static.patch
 URL:		http://gtk.php.net/
 BuildRequires:	gtk+2-devel
 BuildRequires:	php-devel >= 4:5.1
@@ -56,6 +57,7 @@ oparta na PHP 5.1 i GTK+ 2.6.
 %setup -q -n php-gtk-%{version}
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 ./buildconf \
