@@ -1,11 +1,7 @@
-#
-# Notes:
+# NOTE:
 #  - fails to build on Ac: http://bugs.php.net/bug.php?id=41720
 #
-%define		_modname	gtk2
-%define		_sysconfdir	/etc/php
-%define		_snap		20070617
-%define		_rel	1
+%define		modname	gtk2
 Summary:	PHP language bindings for GTK+ toolkit
 Summary(pl.UTF-8):	Moduł PHP z wiązaniami do GTK+
 Name:		php-gtk2
@@ -70,8 +66,12 @@ oparta na PHP 5.1 i GTK+ 2.6.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{php_extensiondir}
-install modules/php_gtk2.so $RPM_BUILD_ROOT%{php_extensiondir}/%{_modname}.so
+install -d $RPM_BUILD_ROOT{%{php_sysconfdir}/conf.d,%{php_extensiondir}}
+install -p modules/php_gtk2.so $RPM_BUILD_ROOT%{php_extensiondir}/%{modname}.so
+cat <<'EOF' > $RPM_BUILD_ROOT%{php_sysconfdir}/conf.d/%{modname}.ini
+; Enable %{modname} extension module
+extension=%{modname}.so
+EOF
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -79,4 +79,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog AUTHORS TODO2 NEWS
-%attr(755,root,root) %{php_extensiondir}/%{_modname}.so
+%config(noreplace) %verify(not md5 mtime size) %{php_sysconfdir}/conf.d/%{modname}.ini
+%attr(755,root,root) %{php_extensiondir}/%{modname}.so
