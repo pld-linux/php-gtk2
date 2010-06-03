@@ -15,7 +15,6 @@ Group:		Libraries
 # tar --exclude-vcs -czf php-gtk-2.0.2.tar.gz php-gtk-2.0.2
 Source0:	php-gtk-%{version}.tar.gz
 # Source0-md5:	63a132426b1f007efc82876906a4e006
-Patch0:		%{name}-object.patch
 URL:		http://gtk.php.net/
 BuildRequires:	gtk+2-devel
 BuildRequires:	php-devel >= 4:5.1
@@ -58,7 +57,6 @@ oparta na PHP 5.1 i GTK+ 2.6.
 
 %prep
 %setup -q -n php-gtk-%{version}
-%patch0 -p1
 
 %build
 ./buildconf \
