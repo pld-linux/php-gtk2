@@ -5,18 +5,21 @@
 Summary:	PHP language bindings for GTK+ toolkit
 Summary(pl.UTF-8):	Moduł PHP z wiązaniami do GTK+
 Name:		php-gtk2
-Version:	2.0.1
-Release:	0.1
+Version:	2.0.2
+Release:	1
 License:	GPL
 Group:		Libraries
-Source0:	http://gtk.php.net/distributions/php-gtk-%{version}.tar.gz
-# Source0-md5:	d57ce885f32749320765e01c079e113b
+#Source0:	http://gtk.php.net/distributions/php-gtk-%{version}.tar.gz
+# 2.0.2 tagged, but no tarball
+# svn co http://svn.php.net/repository/gtk/php-gtk/tags/php_gtk_2_0_2 php-gtk-2.0.2
+# tar --exclude-vcs -czf php-gtk-2.0.2.tar.gz php-gtk-2.0.2
+Source0:	php-gtk-%{version}.tar.gz
+# Source0-md5:	63a132426b1f007efc82876906a4e006
 Patch0:		%{name}-object.patch
-Patch1:		%{name}-libtool.patch
-Patch2:		php53-double-static.patch
 URL:		http://gtk.php.net/
 BuildRequires:	gtk+2-devel
 BuildRequires:	php-devel >= 4:5.1
+BuildRequires:	php-pecl-cairo-devel
 BuildRequires:	php-program
 BuildRequires:	rpmbuild(macros) >= 1.344
 Requires:	php-cli
@@ -56,8 +59,6 @@ oparta na PHP 5.1 i GTK+ 2.6.
 %prep
 %setup -q -n php-gtk-%{version}
 %patch0 -p1
-%patch1 -p1
-%patch2 -p1
 
 %build
 ./buildconf \
