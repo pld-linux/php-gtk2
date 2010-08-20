@@ -1,12 +1,12 @@
 # NOTE:
 #  - fails to build on Ac: http://bugs.php.net/bug.php?id=41720
-#
+#  - make NOT fail if $DISPLAY not present, or we can't autoload package
 %define		modname	gtk2
 Summary:	PHP language bindings for GTK+ toolkit
 Summary(pl.UTF-8):	Moduł PHP z wiązaniami do GTK+
 Name:		php-gtk2
 Version:	2.0.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		Libraries
 #Source0:	http://gtk.php.net/distributions/php-gtk-%{version}.tar.gz
@@ -69,9 +69,14 @@ oparta na PHP 5.1 i GTK+ 2.6.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{php_sysconfdir}/conf.d,%{php_extensiondir}}
 install -p modules/php_gtk2.so $RPM_BUILD_ROOT%{php_extensiondir}/%{modname}.so
+# NOTE:
+# - makes php unusable if loaded automatically and $DISPLAY not present:
+# $ php -r
+# PHP Fatal error:  php-gtk: Could not open display in Unknown on line 0
 cat <<'EOF' > $RPM_BUILD_ROOT%{php_sysconfdir}/conf.d/%{modname}.ini
 ; Enable %{modname} extension module
-extension=%{modname}.so
+; DO NOT load automatically, as it requires DISPLAY being present
+;extension=%{modname}.so
 EOF
 
 %clean
