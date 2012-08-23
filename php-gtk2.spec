@@ -6,7 +6,7 @@ Summary:	PHP language bindings for GTK+ toolkit
 Summary(pl.UTF-8):	Moduł PHP z wiązaniami do GTK+
 Name:		php-gtk2
 Version:	2.0.2
-Release:	5
+Release:	6
 License:	GPL
 Group:		Libraries
 #Source0:	http://gtk.php.net/distributions/php-gtk-%{version}.tar.gz
@@ -22,7 +22,7 @@ BuildRequires:	php-pecl-cairo-devel
 BuildRequires:	php-program
 BuildRequires:	rpmbuild(macros) >= 1.344
 %{?requires_php_extension}
-Requires:	php-common >= 4:5.0.4
+Requires:	php(core) >= 5.0.4
 Provides:	php(gtk2)
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
