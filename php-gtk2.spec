@@ -1,12 +1,13 @@
 # NOTE:
 #  - fails to build on Ac: http://bugs.php.net/bug.php?id=41720
 #  - make NOT fail if $DISPLAY not present, or we can't autoload package
+%define		php_name	php%{?php_suffix}
 %define		modname	gtk2
 Summary:	PHP language bindings for GTK+ toolkit
 Summary(pl.UTF-8):	Moduł PHP z wiązaniami do GTK+
-Name:		php-gtk2
+Name:		%{php_name}-%{modname}
 Version:	2.0.2
-Release:	6
+Release:	7
 License:	GPL
 Group:		Libraries
 #Source0:	http://gtk.php.net/distributions/php-gtk-%{version}.tar.gz
@@ -16,13 +17,12 @@ Group:		Libraries
 Source0:	php-gtk-%{version}.tar.gz
 # Source0-md5:	63a132426b1f007efc82876906a4e006
 URL:		http://gtk.php.net/
+BuildRequires:	%{php_name}-cli
+BuildRequires:	%{php_name}-devel >= 4:5.1
+BuildRequires:	%{php_name}-pecl-cairo-devel
 BuildRequires:	gtk+2-devel
-BuildRequires:	php-devel >= 4:5.1
-BuildRequires:	php-pecl-cairo-devel
-BuildRequires:	php-program
 BuildRequires:	rpmbuild(macros) >= 1.344
 %{?requires_php_extension}
-Requires:	php(core) >= 5.0.4
 Provides:	php(gtk2)
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
